@@ -1,22 +1,14 @@
 import telegram
 
-from core.settings import TELEGRAM_BOT_AUTH, TELEGRAM_BOT_CHANNEL_ID
-
 
 class TelegramBot:
 
-    def __new__(cls):
-        """ We need only one instance of telegram bot"""
-        if not hasattr(cls, 'instance'):
-            cls.instance = super().__new__(cls)
-        return cls.instance
+    def __init__(self, auth_token, chat_id):
+        self.bot = telegram.Bot(token=auth_token)
+        self.chat_id = chat_id
 
-    def __init__(self):
-        self.bot = telegram.Bot(token=TELEGRAM_BOT_AUTH)
-
-    @staticmethod
-    def get_basic_data():
-        return {'chat_id': TELEGRAM_BOT_CHANNEL_ID}
+    def get_basic_data(self):
+        return {'chat_id': self.chat_id}
 
     def send_message(self, text):
         request_data = self.get_basic_data()
@@ -37,6 +29,3 @@ class TelegramBot:
         response = self.bot.sendVideo(**request_data)
         if hasattr(response, 'video'):
             return hasattr(response.video, 'file_size')
-
-
-telegram_bot = TelegramBot()
