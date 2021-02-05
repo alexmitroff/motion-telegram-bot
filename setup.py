@@ -12,6 +12,8 @@ setup(
        'console_scripts': [
            'send-image = commands.send_image:send_image',
            'send-video = commands.send_video:send_video',
+           'send-video-preview = commands.send_video_preview:send_video_preview',
+           'send-validated-video-preview = commands.send_validated_video_preview:send_validated_video_preview',
        ]
    },
 )
