@@ -3,7 +3,7 @@ import os
 from core.settings import TELEGRAM_MIN_FILE_SIZE_BYTES
 
 
-def is_file_exists(file_path):
+def does_file_exist(file_path):
     if os.path.isfile(file_path):
         return True
     else:
