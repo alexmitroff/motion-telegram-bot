@@ -1,11 +1,12 @@
 from core.actions import get_file_path
-from core.validators import is_file_exists
+from core.telegram_bot import telegram_bot
+from core.validators import does_file_exist
 
 
 def send_video():
     file_path = get_file_path()
-    is_file_exists(file_path)
-    print(f"Run send-video script! File path: '{file_path or None}'")
+    does_file_exist(file_path)
+    return telegram_bot.send_video(file_path)
 
 
 if __name__ == '__main__':
