@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
    name='pogost-telegram-bot',
-   version='0.1',
+   version='1.0',
    description='Simplified telegram bot',
    author='Aleksei Mitrofanov',
    author_email='alexmitroff@gmail.com',

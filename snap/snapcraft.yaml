@@ -1,12 +1,12 @@
 name: pogost-telegram-bot
 base: core18
-version: '0.1'
+version: '1.0'
 summary: Simplified telegram bot
 description: |
   This are scripts to send data from our server to our telegram channel.
 
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
+grade: stable
+confinement: strict
 
 parts:
   python-telegram-bot:
@@ -21,3 +21,7 @@ apps:
     command: bin/send-image
   send-video:
     command: bin/send-video
+  send-video-preview:
+    command: bin/send-video-preview
+  send-validated-video-preview:
+    command: bin/send-validated-video-preview
