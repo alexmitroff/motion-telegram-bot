@@ -5,6 +5,10 @@ Powered by [python telegram bot](https://github.com/python-telegram-bot/python-t
 
 
 ## Commands
+### install
+```bash
+sudo snap install motion-telegram-bot_X.X_amd64.snap --dangerous
+```
 ### motion-telegram-bot.send-image
 Simply sends an image if it exists.
 ```bash
