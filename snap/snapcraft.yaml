@@ -1,9 +1,13 @@
 name: motion-telegram-bot
 base: core18
-version: '1.0'
+version: '1.1'
 summary: Simplified telegram bot
 description: |
   This are scripts to send data from our server to our telegram channel.
+
+architectures:
+  - build-on: [amd64]
+    run-on: [amd64]
 
 grade: stable
 confinement: strict
