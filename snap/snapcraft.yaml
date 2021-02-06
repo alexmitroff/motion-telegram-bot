@@ -1,4 +1,4 @@
-name: pogost-telegram-bot
+name: motion-telegram-bot
 base: core18
 version: '1.0'
 summary: Simplified telegram bot

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-   name='pogost-telegram-bot',
+   name='motion-telegram-bot',
    version='1.0',
    description='Simplified telegram bot',
    author='Aleksei Mitrofanov',
