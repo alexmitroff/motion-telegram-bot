@@ -1,4 +1,4 @@
-# Pogost Telegram bot
+# Motion Telegram bot
 
 Simple telegram bot wrapper for sending images and video to chosen chat. Created to work with Motion output.
 Powered by [python telegram bot](https://github.com/python-telegram-bot/python-telegram-bot).
