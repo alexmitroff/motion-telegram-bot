@@ -23,6 +23,8 @@ parts:
 apps:
   send-image:
     command: bin/send-image
+  send-message:
+    command: bin/send-message
   send-video:
     command: bin/send-video
   send-video-preview:
