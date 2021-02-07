@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
    name='motion-telegram-bot',
-   version='1.1',
+   version='1.2',
    description='Simplified telegram bot',
    author='Aleksei Mitrofanov',
    author_email='alexmitroff@gmail.com',
