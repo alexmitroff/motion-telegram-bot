@@ -1,22 +1,25 @@
 import argparse
 
-ARGUMENT_FILE = 'file'
+ARGUMENT_INPUT = 'input'
 ARGUMENT_AUTH = 'bot'
 ARGUMENT_CHAT = 'chat'
 ARGUMENT_MIN = 'minimal'
 
 
 def get_arguments():
-    parser = argparse.ArgumentParser(description='Sends video or image to telegram channel')
-    parser.add_argument('-f', f'--{ARGUMENT_FILE}', required=True, help='path to video or image')
-    parser.add_argument('-b', f'--{ARGUMENT_AUTH}', required=True, help='telegram auth token')
-    parser.add_argument('-c', f'--{ARGUMENT_CHAT}', required=True, help='telegram channel id')
-    parser.add_argument('-m', f'--{ARGUMENT_MIN}', default=10, help='Validation property minimal file size in Mb')
+    parser = argparse.ArgumentParser(description='Sends message, video or image to telegram channel')
+    parser.add_argument('-i', f'--{ARGUMENT_INPUT}', required=True, help='Something you want to sent to telegram chat.'
+                                                                         'This could be a text, path to image '
+                                                                         'or path to video')
+    parser.add_argument('-b', f'--{ARGUMENT_AUTH}', required=True, help='Telegram bot auth token')
+    parser.add_argument('-c', f'--{ARGUMENT_CHAT}', required=True, help='Telegram chat id')
+    parser.add_argument('-m', f'--{ARGUMENT_MIN}', default=10, help='A minimal file size.'
+                                                                    'Used to filter important videos')
     return parser.parse_args()
 
 
-def get_file_path(args):
-    return getattr(args, ARGUMENT_FILE)
+def get_input(args):
+    return getattr(args, ARGUMENT_INPUT)
 
 
 def get_auth_token(args):

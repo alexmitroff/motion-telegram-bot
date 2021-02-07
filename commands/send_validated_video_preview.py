@@ -2,7 +2,7 @@ from core.actions import (
     get_arguments,
     get_auth_token,
     get_chat_id,
-    get_file_path,
+    get_input,
     get_minimal_file_size,
     get_video_preview_path,
 )
@@ -12,7 +12,7 @@ from core.validators import does_file_exist, is_file_valid
 
 def send_validated_video_preview():
     args = get_arguments()
-    file_path = get_file_path(args)
+    file_path = get_input(args)
     does_file_exist(file_path)
     if not is_file_valid(file_path, get_minimal_file_size(args)):
         return
