@@ -23,11 +23,16 @@ parts:
 apps:
   send-image:
     command: bin/send-image
+    plugs: [ network ]
   send-message:
     command: bin/send-message
+    plugs: [ network ]
   send-video:
     command: bin/send-video
+    plugs: [ network ]
   send-video-preview:
     command: bin/send-video-preview
+    plugs: [ network ]
   send-validated-video-preview:
     command: bin/send-validated-video-preview
+    plugs: [ network ]
