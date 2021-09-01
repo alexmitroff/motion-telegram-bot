@@ -9,13 +9,18 @@ Powered by [python telegram bot](https://github.com/python-telegram-bot/python-t
 ```bash
 sudo snap install motion-telegram-bot
 ```
+### motion-telegram-bot.send-doc
+Sends a document if it exists.
+```bash
+motion-telegram-bot.send-doc -i /home/user/archive.zip -b $BOT_AUTH -c $CHANNEL_ID
+```
 ### motion-telegram-bot.send-image
-Simply sends an image if it exists.
+Sends an image if it exists.
 ```bash
 motion-telegram-bot.send-image -i /home/user/test_image.jpg -b $BOT_AUTH -c $CHANNEL_ID
 ```
 ### motion-telegram-bot.send-video
-Simply sends a video if it exists. (h264 | mp4 / mov) < 50Mb
+Sends a video if it exists. (h264 | mp4 / mov) < 50Mb
 ```bash
 motion-telegram-bot.send-video -i /home/user/test_video.mov -b $BOT_AUTH -c $CHANNEL_ID
 ```
