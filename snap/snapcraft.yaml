@@ -21,6 +21,11 @@ parts:
     source: .
 
 apps:
+  send-doc:
+    command: bin/send-doc
+    plugs:
+      - network
+      - home
   send-image:
     command: bin/send-image
     plugs:
