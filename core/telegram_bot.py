@@ -29,3 +29,10 @@ class TelegramBot:
         response = self.bot.sendVideo(**request_data)
         if hasattr(response, 'video'):
             return hasattr(response.video, 'file_size')
+
+    def send_doc(self, file_path):
+        request_data = self.get_basic_data()
+        request_data['document'] = open(file_path, 'rb')
+        response = self.bot.sendDocument(**request_data)
+        if hasattr(response, 'document'):
+            return hasattr(response.video, 'file_size')
